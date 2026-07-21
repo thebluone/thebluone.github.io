@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Exclusão de Conta e Dados</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --warning-bg: #fffbeeb0;
+            --warning-border: #fef08a;
+            --warning-text: #854d0e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+            padding: 40px;
+        }
+
+        .header {
+            margin-bottom: 28px;
+            border-bottom: 2px solid var(--bg);
+            padding-bottom: 20px;
+        }
+
+        .app-name {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text);
+            font-size: 1rem;
+        }
+
+        .instructions-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 24px 0;
+        }
+
+        .instructions-box h2 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .step-list {
+            list-style: none;
+            counter-reset: steps;
+        }
+
+        .step-list li {
+            counter-increment: steps;
+            position: relative;
+            padding-left: 32px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .step-list li::before {
+            content: counter(steps);
+            position: absolute;
+            left: 0;
+            top: 2px;
+            background: var(--accent);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: bold;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .email-btn-container {
+            text-align: center;
+            margin: 28px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .info-section {
+            margin-top: 32px;
+        }
+
+        .info-section h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .info-section ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .info-section li {
+            margin-bottom: 6px;
+        }
+
+        .legal-notice {
+            background-color: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            color: var(--warning-text);
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            margin-top: 24px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="app-name">NOME DO SEU APP</div>
+            <h1>Solicitação de Exclusão de Conta e Dados</h1>
+        </div>
+
+        <p>Respeitamos a sua privacidade e garantimos o direito de solicitar a exclusão permanente da sua conta e de todos os dados pessoais associados ao nosso aplicativo.</p>
+
+        <div class="instructions-box">
+            <h2>Como solicitar a exclusão:</h2>
+            <ol class="step-list">
+                <li>Abra o seu cliente de e-mail corporativo ou pessoal.</li>
+                <li>Envie uma mensagem para <strong>suporte@seuapp.com</strong> (ou utilize o botão abaixo).</li>
+                <li>Utilize o assunto exatamente como: <strong>Exclusão de Conta</strong>.</li>
+                <li>A mensagem deve ser enviada <strong>obrigatoriamente a partir do e-mail cadastrado</strong> no aplicativo para validação da sua identidade.</li>
+            </ol>
+        </div>
+
+        <div class="email-btn-container">
+            <a href="mailto:suporte@seuapp.com?subject=Exclus%C3%A3o%20de%20Conta&body=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20a%20exclus%C3%A3o%20permanente%20da%20minha%20conta%20e%20dos%20meus%20dados%20cadastrados%20no%20aplicativo.%0A%0AE-mail%20da%20conta%3A%20" class="btn">Solicitar Exclusão via E-mail</a>
+        </div>
+
+        <div class="info-section">
+            <h3>Quais dados serão excluídos?</h3>
+            <ul>
+                <li>Informações do perfil (Nome, E-mail, Foto de Perfil).</li>
+                <li>Histórico de atividades e preferências salvas no app.</li>
+                <li>Identificadores do dispositivo e tokens de autenticação.</li>
+            </ul>
+
+            <h3>Prazos e Retenção de Dados</h3>
+            <p>Após o recebimento do e-mail, o processo de exclusão total dos seus dados será concluído no prazo máximo de <strong>15 dias úteis</strong>.</p>
+        </div>
+
+        <div class="legal-notice">
+            <strong>Nota Importante:</strong> Alguns dados podem ser retidos por períodos adicionais caso haja obrigação legal, fiscal ou determinação judicial, conforme previsto pela Lei Geral de Proteção de Dados (LGPD) e pelo ECA Digital (Lei 15.211).
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Nome da Sua Empresa / Desenvolvedor. Todos os direitos reservados.</p>
+            <p><a href="privacy.html">Voltar para a Política de Privacidade</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

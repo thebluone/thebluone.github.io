@@ -1,74 +1,295 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header></header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions of Use - Registry Pull</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        main > strong:first-child {
+            font-size: 2.2rem;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        main > p:first-of-type {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: var(--text-muted);
+        }
+
+        strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        section > strong {
+            display: block;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            margin-top: 40px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        p {
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #1d4ed8;
+        }
+
+        br {
+            display: none;
+        }
+
+        em {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-credit {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 40px 20px;
+            }
+
+            main > strong:first-child {
+                font-size: 1.6rem;
+            }
+
+            .nav-links {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            header {
+                padding: 15px 20px;
+            }
+
+            section > strong {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">Registry Pull</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="delete-account.html">Delete Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
-    <strong>Termos e Condições de Uso - Registry Pull</strong>
+    <strong>Terms and Conditions of Use - Registry Pull</strong>
 
-<p>Estes Termos e Condições de Uso ("Termos") regem o uso do aplicativo móvel <strong>Registry Pull</strong> e quaisquer serviços ou sites relacionados operados por <strong>The blu</strong> (doravante denominado "Provedor de Serviços", "Nós" ou "Desenvolvedor").</p>
+<p>These Terms and Conditions of Use ("Terms") govern the use of the mobile application <strong>Registry Pull</strong> and any services or sites related operated by <strong>The blu</strong> (hereinafter referred to as "Service Provider", "We" or "Developer").</p>
 
-<p>Ao baixar, instalar ou utilizar o Aplicativo, você concorda expressamente em cumprir e estar vinculado a estes Termos. Se você não concordar com qualquer parte destes Termos, não deverá utilizar o Aplicativo.</p>
+<p>By downloading, installing or using the Application, you expressly agree to comply with and be bound by these Terms. If you do not agree with any part of these Terms, you should not use the Application.</p>
 
-<br /><strong>1. Elegibilidade e Cadastro de Conta</strong>
+<br /><strong>1. Eligibility and Account Registration</strong>
 <ul>
-  <li><strong>Idade Mínima:</strong> Para utilizar o Aplicativo, você deve ter pelo menos 13 anos de idade (ou a idade de consentimento digital exigida no seu país de residência). Usuários menores de 18 anos declaram possuir o consentimento dos pais ou responsáveis para utilizar o serviço.</li>
-  <li><strong>Autenticação:</strong> O acesso ao aplicativo ocorre de forma segura por meio de provedores de terceiros (Google Sign-In e Firebase Authentication). Você é o único responsável por manter a segurança e a confidencialidade das credenciais de acesso da sua conta.</li>
+  <li><strong>Minimum Age:</strong> To use the Application, you must be at least 13 years old (or the age of digital consent required in your country of residence). Users under 18 years old declare that they have the consent of parents or guardians to use the service.</li>
+  <li><strong>Authentication:</strong> Access to the application occurs securely through third-party providers (Google Sign-In and Firebase Authentication). You are solely responsible for maintaining the security and confidentiality of your account access credentials.</li>
 </ul>
 
-<br /><strong>2. Isenção de Responsabilidade de Saúde e Atividade Física (Aviso Médico)</strong>
-<p style="color: #d32f2f; font-weight: bold;">AVISO IMPORTANTE: A calistenia e quaisquer exercícios físicos de peso corporal envolvem riscos de lesões físicas ou problemas de saúde.</p>
+<br /><strong>2. Health and Physical Activity Disclaimer (Medical Notice)</strong>
+<p style="color: #d32f2f; font-weight: bold;">IMPORTANT NOTICE: Calisthenics and any bodyweight physical exercises involve risks of physical injury or health problems.</p>
 <ul>
-  <li><strong>Sem Aconselhamento Médico:</strong> O Registry Pull é uma ferramenta de auxílio ao registro de treinos e fornecimento de sugestões automatizadas por Inteligência Artificial. O aplicativo <strong>não fornece aconselhamento médico, diagnóstico ou tratamento</strong>. O conteúdo fornecido não substitui o acompanhamento de profissionais de educação física ou profissionais da saúde.</li>
-  <li><strong>Responsabilidade Individual:</strong> Você reconhece que a prática de exercícios físicos é voluntária e assume total responsabilidade por sua integridade física. O Provedor de Serviços não será responsável por quaisquer lesões, danos à saúde, dores ou acidentes resultantes da execução de treinos listados ou sugeridos no aplicativo.</li>
-  <li><strong>Consulta Médica:</strong> Recomendamos fortemente que você consulte um médico antes de iniciar qualquer programa de exercícios físicos ou utilizar as rotinas do aplicativo.</li>
+  <li><strong>No Medical Advice:</strong> Registry Pull is a tool to aid in recording workouts and providing automated suggestions by Artificial Intelligence. The application <strong>does not provide medical advice, diagnosis or treatment</strong>. The content provided does not replace the monitoring of physical education professionals or healthcare professionals.</li>
+  <li><strong>Individual Responsibility:</strong> You acknowledge that the practice of physical exercises is voluntary and assume full responsibility for your physical integrity. The Service Provider will not be responsible for any injuries, health damage, pain or accidents resulting from the execution of workouts listed or suggested in the application.</li>
+  <li><strong>Medical Consultation:</strong> We strongly recommend that you consult a doctor before starting any physical exercise program or using the application's routines.</li>
 </ul>
 
-<br /><strong>3. Recursos de Inteligência Artificial (IA)</strong>
+<br /><strong>3. Artificial Intelligence (AI) Features</strong>
 <ul>
-  <li>O Aplicativo oferece recursos que utilizam IA para gerar recomendações personalizadas com base no seu histórico de treinos e preferências declaradas.</li>
-  <li>As rotinas geradas por IA são puramente sugestões automatizadas. Você deve avaliar se as séries, exercícios e intensidade propostos são adequados para o seu nível físico atual antes de realizá-los.</li>
+  <li>The Application offers features that use AI to generate personalized recommendations based on your training history and declared preferences.</li>
+  <li>AI-generated routines are purely automated suggestions. You should assess whether the proposed sets, exercises and intensity are appropriate for your current fitness level before performing them.</li>
 </ul>
 
-<br /><strong>4. Assinaturas e Compras no Aplicativo (Registry Pull Pro)</strong>
+<br /><strong>4. Subscriptions and In-App Purchases (Registry Pull Pro)</strong>
 <ul>
-  <li>O Aplicativo oferece uma modalidade premium chamada <strong>Registry Pull Pro</strong>, que desbloqueia funcionalidades adicionais de treinos e análises.</li>
-  <li><strong>Processamento de Pagamento:</strong> As assinaturas e transações são processadas e gerenciadas de forma segura por meio da plataforma <strong>RevenueCat</strong>, da Google Play Store (para dispositivos Android) e/ou outros canais aplicáveis.</li>
-  <li><strong>Cobrança e Cancelamento:</strong> O faturamento ocorre de forma recorrente (mensal ou anual, conforme escolhido no momento da contratação). O cancelamento e a gestão da assinatura devem ser realizados diretamente pelo usuário na central de assinaturas do seu dispositivo móvel (Google Play Store ou Customer Center do RevenueCat dentro do app).</li>
+  <li>The Application offers a premium mode called <strong>Registry Pull Pro</strong>, which unlocks additional workout and analytics features.</li>
+  <li><strong>Payment Processing:</strong> Subscriptions and transactions are processed and managed securely through the <strong>RevenueCat</strong> platform, Google Play Store (for Android devices) and/or other applicable channels.</li>
+  <li><strong>Billing and Cancellation:</strong> Billing occurs on a recurring basis (monthly or annually, as chosen at the time of subscription). Cancellation and subscription management must be performed directly by the user in the subscriptions center of your mobile device (Google Play Store or RevenueCat Customer Center within the app).</li>
 </ul>
 
-<br /><strong>5. Uso Permitido e Restrições</strong>
-<p>Ao utilizar o Aplicativo, você concorda em não:</p>
+<br /><strong>5. Permitted Use and Restrictions</strong>
+<p>By using the Application, you agree not to:</p>
 <ul>
-  <li>Tentar fazer engenharia reversa, descompilar ou burlar os sistemas de assinatura do aplicativo.</li>
-  <li>Utilizar robôs, scripts ou qualquer ferramenta automatizada no aplicativo que possa sobrecarregar nossos servidores.</li>
-  <li>Usar o Aplicativo para fins ilegais ou não autorizados.</li>
+  <li>Attempt to reverse engineer, decompile or bypass the application's subscription systems.</li>
+  <li>Use bots, scripts or any automated tools in the application that could overload our servers.</li>
+  <li>Use the Application for illegal or unauthorized purposes.</li>
 </ul>
 
-<br /><strong>6. Propriedade Intelectual</strong>
-<p>Todos os direitos autorais, marcas registradas, código-fonte, designs visuais, ícones, layouts de tela e conteúdos integrados ao Aplicativo são de propriedade exclusiva de <strong>The blu</strong>. O download e uso do aplicativo conferem a você apenas uma licença pessoal, revogável, não exclusiva e intransferível para uso pessoal e não comercial.</p>
+<br /><strong>6. Intellectual Property</strong>
+<p>All copyrights, trademarks, source code, visual designs, icons, screen layouts and content integrated into the Application are the exclusive property of <strong>The blu</strong>. The download and use of the application grant you only a personal, revocable, non-exclusive and non-transferable license for personal and non-commercial use.</p>
 
-<br /><strong>7. Suspensão e Encerramento de Conta</strong>
-<p>Reservamo-nos o direito de suspender ou encerrar o seu acesso ao Aplicativo a qualquer momento, sem aviso prévio, caso identifiquemos violações graves destes Termos ou suspeita de atividades fraudulentas.</p>
+<br /><strong>7. Account Suspension and Termination</strong>
+<p>We reserve the right to suspend or terminate your access to the Application at any time, without prior notice, if we identify serious violations of these Terms or suspect fraudulent activity.</p>
 
-<br /><strong>8. Limitação de Responsabilidade</strong>
-<p>O Aplicativo é fornecido "no estado em que se encontra" e "conforme disponível", sem garantias de qualquer tipo, sejam expressas ou implícitas. Não garantimos que o aplicativo estará livre de erros, interrupções ou bugs decorrentes de falhas de conexão de internet ou serviços de terceiros (como falhas temporárias nos servidores do Firebase ou RevenueCat).</p>
+<br /><strong>8. Limitation of Liability</strong>
+<p>The Application is provided "as is" and "as available", without warranties of any kind, whether express or implied. We do not guarantee that the application will be free from errors, interruptions or bugs resulting from internet connection failures or third-party services (such as temporary failures on Firebase or RevenueCat servers).</p>
 
-<br /><strong>9. Alterações nos Termos e Condições</strong>
-<p>O Provedor de Serviços pode atualizar estes Termos periodicamente. O uso contínuo do Aplicativo após a publicação de novos Termos constitui a sua aceitação das alterações. A data da última atualização constará no fim deste documento.</p>
+<br /><strong>9. Changes to Terms and Conditions</strong>
+<p>The Service Provider may update these Terms periodically. Your continued use of the Application after the posting of new Terms constitutes your acceptance of the changes. The date of last update will be shown at the end of this document.</p>
 
-<br /><strong>10. Lei Aplicável e Foro</strong>
-<p>Estes Termos são regidos e interpretados de acordo com as leis da República Federativa do Brasil. Para a resolução de quaisquer conflitos decorrentes destes Termos, as partes elegem o foro da comarca de residência do usuário, ou o foro acordado mutuamente aplicável por lei.</p>
+<br /><strong>10. Applicable Law and Jurisdiction</strong>
+<p>These Terms are governed by and construed in accordance with the laws of the Federative Republic of Brazil. For the resolution of any conflicts arising from these Terms, the parties elect the court of the district of the user's residence, or the mutually agreed forum applicable by law.</p>
 
-<br /><strong>Contato</strong>
-<p>Caso tenha alguma dúvida sobre estes Termos de Uso ou precise de suporte, entre em contato via e-mail em <strong>suportetheblu@gmail.com</strong>.</p>
+<br /><strong>Contact</strong>
+<p>If you have any questions about these Terms of Use or need support, please contact us via email at <strong>suportetheblu@gmail.com</strong>.</p>
 
-<p><em>Estes Termos e Condições de Uso entram em vigor em 14 de julho de 2026.</em></p>
+<p><em>These Terms and Conditions of Use are effective as of July 14, 2026.</em></p>
 
     </main>
-    <footer></footer>
-  </body>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms and Conditions</a>
+                <a href="delete-account.html">Delete Account</a>
+                <a href="mailto:suportetheblu@gmail.com">Contact Support</a>
+            </div>
+            <div class="footer-credit">
+                <p>&copy; 2026 The blu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

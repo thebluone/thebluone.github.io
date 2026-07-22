@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solicitação de Exclusão de Conta e Dados</title>
+    <title>Registry Pull - Track Your Calisthenics Progress</title>
     <style>
         :root {
             --primary: #1e293b;
@@ -13,9 +13,7 @@
             --text: #334155;
             --text-muted: #64748b;
             --border: #e2e8f0;
-            --warning-bg: #fffbeeb0;
-            --warning-border: #fef08a;
-            --warning-text: #854d0e;
+            --success: #10b981;
         }
 
         * {
@@ -29,210 +27,323 @@
             background-color: var(--bg);
             color: var(--text);
             line-height: 1.6;
-            padding: 40px 20px;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            min-height: 100vh;
         }
 
-        .container {
-            max-width: 680px;
-            width: 100%;
-            background: var(--card-bg);
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-            border: 1px solid var(--border);
-            padding: 40px;
-        }
-
-        .header {
-            margin-bottom: 28px;
-            border-bottom: 2px solid var(--bg);
-            padding-bottom: 20px;
-        }
-
-        .app-name {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
             color: var(--accent);
-            font-weight: 700;
-            margin-bottom: 6px;
         }
 
-        h1 {
-            font-size: 1.75rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        p {
-            margin-bottom: 16px;
-            color: var(--text);
-            font-size: 1rem;
-        }
-
-        .instructions-box {
-            background-color: #f0f7ff;
-            border-left: 4px solid var(--accent);
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            margin: 24px 0;
-        }
-
-        .instructions-box h2 {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 12px;
-        }
-
-        .step-list {
-            list-style: none;
-            counter-reset: steps;
-        }
-
-        .step-list li {
-            counter-increment: steps;
-            position: relative;
-            padding-left: 32px;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-        }
-
-        .step-list li::before {
-            content: counter(steps);
-            position: absolute;
-            left: 0;
-            top: 2px;
-            background: var(--accent);
-            color: white;
-            font-size: 0.75rem;
-            font-weight: bold;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
+        .nav-links {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            gap: 30px;
+            list-style: none;
         }
 
-        .email-btn-container {
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
+            color: white;
+            padding: 100px 40px;
             text-align: center;
-            margin: 28px 0;
         }
 
-        .btn {
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .btn-primary {
             display: inline-block;
             background-color: var(--accent);
-            color: #ffffff;
+            color: white;
+            padding: 14px 40px;
+            border-radius: 8px;
             text-decoration: none;
-            padding: 12px 28px;
-            border-radius: 6px;
             font-weight: 600;
             font-size: 1rem;
             transition: background-color 0.2s ease;
+            margin-right: 15px;
         }
 
-        .btn:hover {
+        .btn-primary:hover {
             background-color: #1d4ed8;
         }
 
-        .info-section {
-            margin-top: 32px;
+        .btn-secondary {
+            display: inline-block;
+            background-color: transparent;
+            color: white;
+            padding: 14px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid white;
+            transition: all 0.2s ease;
         }
 
-        .info-section h3 {
-            font-size: 1.1rem;
+        .btn-secondary:hover {
+            background-color: white;
             color: var(--primary);
-            margin-bottom: 8px;
         }
 
-        .info-section ul {
-            padding-left: 20px;
+        .features {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 40px;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: var(--primary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 40px 30px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
             margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .feature-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
         }
 
-        .info-section li {
-            margin-bottom: 6px;
-        }
-
-        .legal-notice {
-            background-color: var(--warning-bg);
-            border: 1px solid var(--warning-border);
-            color: var(--warning-text);
-            padding: 16px;
-            border-radius: 8px;
-            font-size: 0.875rem;
-            margin-top: 24px;
-        }
-
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent) 0%, #1d4ed8 100%);
+            color: white;
+            padding: 80px 40px;
             text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
+            margin: 80px 0 0 0;
         }
 
-        .footer a {
-            color: var(--accent);
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
             text-decoration: none;
+            transition: color 0.2s ease;
         }
 
-        .footer a:hover {
-            text-decoration: underline;
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-credit {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .features h2 {
+                font-size: 1.8rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                display: block;
+                margin-bottom: 15px;
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <div class="header">
-            <div class="app-name">NOME DO SEU APP</div>
-            <h1>Solicitação de Exclusão de Conta e Dados</h1>
-        </div>
-
-        <p>Respeitamos a sua privacidade e garantimos o direito de solicitar a exclusão permanente da sua conta e de todos os dados pessoais associados ao nosso aplicativo.</p>
-
-        <div class="instructions-box">
-            <h2>Como solicitar a exclusão:</h2>
-            <ol class="step-list">
-                <li>Abra o seu cliente de e-mail corporativo ou pessoal.</li>
-                <li>Envie uma mensagem para <strong>suporte@seuapp.com</strong> (ou utilize o botão abaixo).</li>
-                <li>Utilize o assunto exatamente como: <strong>Exclusão de Conta</strong>.</li>
-                <li>A mensagem deve ser enviada <strong>obrigatoriamente a partir do e-mail cadastrado</strong> no aplicativo para validação da sua identidade.</li>
-            </ol>
-        </div>
-
-        <div class="email-btn-container">
-            <a href="mailto:suporte@seuapp.com?subject=Exclus%C3%A3o%20de%20Conta&body=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20a%20exclus%C3%A3o%20permanente%20da%20minha%20conta%20e%20dos%20meus%20dados%20cadastrados%20no%20aplicativo.%0A%0AE-mail%20da%20conta%3A%20" class="btn">Solicitar Exclusão via E-mail</a>
-        </div>
-
-        <div class="info-section">
-            <h3>Quais dados serão excluídos?</h3>
-            <ul>
-                <li>Informações do perfil (Nome, E-mail, Foto de Perfil).</li>
-                <li>Histórico de atividades e preferências salvas no app.</li>
-                <li>Identificadores do dispositivo e tokens de autenticação.</li>
+    <header>
+        <nav>
+            <div class="logo">Registry Pull</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="about/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="about/terms.html">Terms</a></li>
+                <li><a href="about/delete-account.html">Delete Account</a></li>
             </ul>
+        </nav>
+    </header>
 
-            <h3>Prazos e Retenção de Dados</h3>
-            <p>Após o recebimento do e-mail, o processo de exclusão total dos seus dados será concluído no prazo máximo de <strong>15 dias úteis</strong>.</p>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Track Your Calisthenics Progress</h1>
+            <p>Registry Pull is your personal training companion. Record your workouts, monitor your progress, and get personalized recommendations powered by AI.</p>
+            <div>
+                <a href="https://play.google.com/store/apps/details?id=theblu.com.registry_pull.registry_pull" class="btn-primary">Download Now</a>
+                <a href="#features" class="btn-secondary">Learn More</a>
+            </div>
         </div>
+    </section>
 
-        <div class="legal-notice">
-            <strong>Nota Importante:</strong> Alguns dados podem ser retidos por períodos adicionais caso haja obrigação legal, fiscal ou determinação judicial, conforme previsto pela Lei Geral de Proteção de Dados (LGPD) e pelo ECA Digital (Lei 15.211).
+    <section class="features" id="features">
+        <h2>Why Choose Registry Pull?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Track Progress</h3>
+                <p>Record every set, rep, and session. Monitor your improvements over time with detailed statistics and insights.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>AI Recommendations</h3>
+                <p>Get personalized workout suggestions based on your performance, level, and preferences.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Sync Across Devices</h3>
+                <p>Access your training data on any device. Your workouts are always up-to-date and backed up securely in the cloud.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💪</div>
+                <h3>Calisthenics Focused</h3>
+                <p>Designed specifically for bodyweight training. Track exercises, sets, reps, and body preferences for targeted progress.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎥</div>
+                <h3>Video Library</h3>
+                <p>Access instructional videos for proper form and technique on all your favorite calisthenics exercises.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Privacy First</h3>
+                <p>Your data is private and secure. Full control over your account and the option to delete all your data anytime.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="footer">
-            <p>&copy; 2026 Nome da Sua Empresa / Desenvolvedor. Todos os direitos reservados.</p>
-            <p><a href="privacy.html">Voltar para a Política de Privacidade</a></p>
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Training?</h2>
+            <p>Join thousands of users already tracking their calisthenics progress with Registry Pull.</p>
+            <a href="https://play.google.com/store/apps/details?id=theblu.com.registry_pull.registry_pull" class="btn-primary">Get Started Free</a>
         </div>
-    </div>
+    </section>
 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about/privacy-policy.html">Privacy Policy</a>
+                <a href="about/terms.html">Terms and Conditions</a>
+                <a href="about/delete-account.html">Delete Account</a>
+                <a href="mailto:suportetheblu@gmail.com">Contact Support</a>
+            </div>
+            <div class="footer-credit">
+                <p>&copy; 2026 The blu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
